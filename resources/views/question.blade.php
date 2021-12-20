@@ -23,6 +23,14 @@
                             </div>
                         @endif
 
+                        <div id="correct-alert" class="alert alert-success d-none" role="alert">
+                            Correct! You selected to right answer. Click continue to move to the next question.
+                        </div>
+
+                        <div id="incorrect-alert" class="alert alert-danger d-none" role="alert">
+                            Incorrect! You selected to wrong answer. Click continue to move to the next question.
+                        </div>
+
                         <div class="row">
                             <div class="col-lg-8">
                                 <h4>{{ $question->question }}</h4>
@@ -53,7 +61,17 @@
                             @endforeach
 
                             <br>
-                            <button class="btn btn-sm btn-primary" type="submit">Submit</button>
+                            <button
+                                id="submit"
+                                class="btn btn-sm btn-primary"
+                                type="button"
+                                onclick="handleSubmit({{ $question->answers->where('is_correct?', true)->first()->id }})"
+                            >
+                                Submit
+                            </button>
+                            <button id="continue" class="d-none btn btn-sm btn-primary" type="submit">
+                                Continue
+                            </button>
                         </form>
 
                         <hr>
@@ -75,3 +93,31 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+<script>
+    function handleSubmit(correctAnswerId) {
+        const inputs = document.getElementsByTagName("input");
+        const selected = document.querySelector('input[name="answer_id"]:checked');
+
+        if (selected) {
+            for (let input of inputs) {
+                input.disabled = true;
+            }
+
+            if (selected.value == correctAnswerId) {
+                document.getElementById("correct-alert").classList.remove('d-none');
+            }
+            else {
+                document.getElementById("incorrect-alert").classList.remove('d-none');
+            }
+
+            document.getElementById("submit").classList.add('d-none');
+            document.getElementById("continue").classList.remove('d-none');
+        }
+        else {
+            alert('Please select an answer.')
+        }
+    }
+</script>
+@endpush
