@@ -101,11 +101,15 @@
         const selected = document.querySelector('input[name="answer_id"]:checked');
 
         if (selected) {
+            const selectedValue = selected.value;
+
             for (let input of inputs) {
-                input.disabled = true;
+                if (selectedValue != input.value) {
+                    input.disabled = true;
+                }
             }
 
-            if (selected.value == correctAnswerId) {
+            if (selectedValue == correctAnswerId) {
                 document.getElementById("correct-alert").classList.remove('d-none');
             }
             else {
