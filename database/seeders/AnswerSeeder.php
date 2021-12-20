@@ -1069,5 +1069,37 @@ class AnswerSeeder extends Seeder
             'created_at' => '2021-12-19 22:09:54',
             'updated_at' => '2021-12-19 22:09:54',
         ]);
+        \App\Models\Answer::create([
+            'id' => 137,
+            'question_id' => 10,
+            'is_correct?' => 1,
+            'answer' => 'Glancing towards the blind spot in the direction the driver intends to move',
+            'created_at' => '2021-12-20 00:28:39',
+            'updated_at' => '2021-12-20 00:28:39',
+        ]);
+        \App\Models\Answer::create([
+            'id' => 138,
+            'question_id' => 10,
+            'is_correct?' => 0,
+            'answer' => 'Glancing into the left outside mirror',
+            'created_at' => '2021-12-20 00:28:51',
+            'updated_at' => '2021-12-20 00:28:51',
+        ]);
+        \App\Models\Answer::create([
+            'id' => 139,
+            'question_id' => 10,
+            'is_correct?' => 0,
+            'answer' => 'Glancing into both the inside and outside mirrors',
+            'created_at' => '2021-12-20 00:28:59',
+            'updated_at' => '2021-12-20 00:28:59',
+        ]);
+        \App\Models\Answer::create([
+            'id' => 140,
+            'question_id' => 10,
+            'is_correct?' => 0,
+            'answer' => 'Glancing into the right outside mirror',
+            'created_at' => '2021-12-20 00:29:09',
+            'updated_at' => '2021-12-20 00:29:09',
+        ]);
     }
 }
