@@ -527,7 +527,7 @@ class AnswerSeeder extends Seeder
         ]);
         \App\Models\Answer::create([
             'id' => 65,
-            'question_id' => 17,
+            'question_id' => 18,
             'is_correct?' => 0,
             'answer' => 'Traffic entering from the right',
             'created_at' => '2021-12-19 21:33:20',
@@ -535,7 +535,7 @@ class AnswerSeeder extends Seeder
         ]);
         \App\Models\Answer::create([
             'id' => 66,
-            'question_id' => 17,
+            'question_id' => 18,
             'is_correct?' => 0,
             'answer' => 'Winding road ahead',
             'created_at' => '2021-12-19 21:33:26',
@@ -543,7 +543,7 @@ class AnswerSeeder extends Seeder
         ]);
         \App\Models\Answer::create([
             'id' => 67,
-            'question_id' => 17,
+            'question_id' => 18,
             'is_correct?' => 1,
             'answer' => 'Curve right',
             'created_at' => '2021-12-19 21:33:36',
@@ -551,7 +551,7 @@ class AnswerSeeder extends Seeder
         ]);
         \App\Models\Answer::create([
             'id' => 68,
-            'question_id' => 17,
+            'question_id' => 18,
             'is_correct?' => 0,
             'answer' => 'Concealed intersection on the right',
             'created_at' => '2021-12-19 21:33:47',

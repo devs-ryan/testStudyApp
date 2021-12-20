@@ -145,7 +145,7 @@ class QuestionSeeder extends Seeder
             'id' => 17,
             'test_id' => 1,
             'question' => 'Using the 2-second rule to judge a safe following distance when driving:',
-            'image' => 'f11ecc040d5a0450b7e3f6116814113390773742.png',
+            'image' => null,
             'created_at' => '2021-12-19 18:52:14',
             'updated_at' => '2021-12-19 21:34:12',
         ]);
@@ -153,9 +153,9 @@ class QuestionSeeder extends Seeder
             'id' => 18,
             'test_id' => 1,
             'question' => 'This sign indicates:',
-            'image' => null,
+            'image' => 'f11ecc040d5a0450b7e3f6116814113390773742.png',
             'created_at' => '2021-12-19 18:52:23',
-            'updated_at' => '2021-12-19 18:52:23',
+            'updated_at' => '2021-12-20 00:35:24',
         ]);
         \App\Models\Question::create([
             'id' => 19,
