@@ -104,7 +104,7 @@
             const selectedValue = selected.value;
 
             for (let input of inputs) {
-                if (selectedValue != input.value) {
+                if (selectedValue != input.value && input.name == 'answer_id') {
                     input.disabled = true;
                 }
             }
