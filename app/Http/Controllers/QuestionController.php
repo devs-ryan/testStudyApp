@@ -54,7 +54,10 @@ class QuestionController extends Controller
         $correctAnswers = 0;
 
         foreach($questions as $question) {
-            if ($question->userAnswer && $question->userAnswer->{'is_correct?'}) {
+
+            $userAnswer = $question->getUserAnswer($user);
+
+            if ($userAnswer && $userAnswer->{'is_correct?'}) {
                 $correctAnswers++;
             }
         }

@@ -11,8 +11,13 @@ class Question extends Model
         return $this->hasMany(\App\Models\Answer::class);
     }
 
-    public function userAnswer()
+    public function userAnswers()
     {
-        return $this->hasOne(\App\Models\UserAnswer::class);
+        return $this->hasMany(\App\Models\UserAnswer::class);
+    }
+
+    public function getUserAnswer($user)
+    {
+        return $this->userAnswers->where('user_id', $user->id)->first();
     }
 }
