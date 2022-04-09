@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f7bea6de5b7b345e0ca161d917e97b5",
+    "content-hash": "90daa27bd66462b755050086b58e98ec",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -185,6 +185,68 @@
                 "source": "https://github.com/devs-ryan/laravel-easy-admin/tree/0.1"
             },
             "time": "2021-05-22T22:16:58+00:00"
+        },
+        {
+            "name": "devs_ryan/laravel-easy-api",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/devs-ryan/laravel-easy-api.git",
+                "reference": "b9e1b8d76a141dba0dd125e4364d9131d33c62c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/devs-ryan/laravel-easy-api/zipball/b9e1b8d76a141dba0dd125e4364d9131d33c62c0",
+                "reference": "b9e1b8d76a141dba0dd125e4364d9131d33c62c0",
+                "shasum": ""
+            },
+            "require": {
+                "devs_ryan/laravel-easy-admin": ">=0.1.x-dev",
+                "intervention/image": "^2.5",
+                "laravel/framework": ">=7.0",
+                "php": ">=7.2"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "DevsRyan\\LaravelEasyApi\\LaravelEasyApiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DevsRyan\\LaravelEasyApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan Claxton",
+                    "email": "rclaxton.dev@gmail.com"
+                }
+            ],
+            "description": "Converts Laravel Easy Admin into a headless CMS.",
+            "keywords": [
+                "admin",
+                "api",
+                "easy",
+                "easy admin",
+                "easy api",
+                "framework",
+                "laravel",
+                "laravel easy admin",
+                "laravel easy api"
+            ],
+            "support": {
+                "issues": "https://github.com/devs-ryan/laravel-easy-api/issues",
+                "source": "https://github.com/devs-ryan/laravel-easy-api/tree/master"
+            },
+            "time": "2021-11-07T21:07:17+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -8088,7 +8150,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "devs_ryan/laravel-easy-admin": 20
+        "devs_ryan/laravel-easy-admin": 20,
+        "devs_ryan/laravel-easy-api": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -8096,5 +8159,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
